@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" userInteractionEnabled="NO" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchscreenaspectfill" translatesAutoresizingMaskIntoConstraints="NO" id="x7v-sA-yCX">
+                                <rect key="frame" x="0.0" y="35" width="600" height="565"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchscreencenter" translatesAutoresizingMaskIntoConstraints="NO" id="Izq-jc-fae">
+                                <rect key="frame" x="20" y="131" width="560" height="354"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="x7v-sA-yCX" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="3D9-6W-WtM"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Izq-jc-fae" secondAttribute="bottom" constant="115" id="OYa-z4-Zrq"/>
+                            <constraint firstItem="x7v-sA-yCX" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="QBO-d0-Lqt"/>
+                            <constraint firstItem="Izq-jc-fae" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="111" id="e1W-Bc-yfc"/>
+                            <constraint firstItem="x7v-sA-yCX" firstAttribute="centerX" secondItem="Izq-jc-fae" secondAttribute="centerX" id="gVl-d7-3vc"/>
+                            <constraint firstItem="Izq-jc-fae" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="iQh-Vb-F5o"/>
+                            <constraint firstItem="x7v-sA-yCX" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="15" id="lfb-Dq-MaA"/>
+                            <constraint firstAttribute="trailing" secondItem="x7v-sA-yCX" secondAttribute="trailing" id="ouk-hr-R0L"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="185" y="314"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="launchscreenaspectfill" width="2048" height="2732"/>
+        <image name="launchscreencenter" width="750" height="540"/>
+    </resources>
+</document>
