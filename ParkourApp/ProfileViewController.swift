@@ -9,6 +9,11 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    
+    //MARK: Properties
+    
+    @IBOutlet weak var profilePic: UIImageView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,5 +36,19 @@ class ProfileViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    //MARK: Actions
+    
+    @IBAction func logout(_ sender: UIButton) {
+        
+        let alert = UIAlertController(title: "Logging out", message: "You're logged out successfully", preferredStyle: UIAlertControllerStyle.alert)
+        
+        let gotitAction = UIAlertAction(title: "Got it", style: UIAlertActionStyle.default, handler:  { action in self.performSegue(withIdentifier: "userLoggedOut", sender: self) } )
+        
+        alert.addAction(gotitAction)
+        
+        self.present(alert, animated: true, completion: nil)
+        
+    }
 
 }

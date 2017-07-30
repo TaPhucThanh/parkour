@@ -32,6 +32,10 @@
 		E191B9031DE5948F00CAE18E /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E191B9021DE5948F00CAE18E /* MessagesViewController.swift */; };
 		E1B060EA1EF8DF5D00F7646F /* ALChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B060E91EF8DF5D00F7646F /* ALChatManager.swift */; };
 		E1B060EC1F251E1600F7646F /* Gifs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B060EB1F251E1600F7646F /* Gifs.swift */; };
+		E1B060F01F2C45B400F7646F /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B060EF1F2C45B400F7646F /* NotificationTableViewCell.swift */; };
+		E1B060F21F2C73C800F7646F /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B060F11F2C73C800F7646F /* NotificationViewController.swift */; };
+		E1B060F41F2D0DBF00F7646F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B060F31F2D0DBF00F7646F /* SearchViewController.swift */; };
+		E1B060F61F2D0E1600F7646F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B060F51F2D0E1600F7646F /* SettingsViewController.swift */; };
 		E1E6DC0E1D8FE66D000D1DEF /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E6DC0D1D8FE66D000D1DEF /* SignupViewController.swift */; };
 		E1E6DC101D8FFC35000D1DEF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E6DC0F1D8FFC35000D1DEF /* LoginViewController.swift */; };
 		E1EE5C861DE56EFE0036AC7D /* MainTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE5C851DE56EFE0036AC7D /* MainTimelineViewController.swift */; };
@@ -100,6 +104,10 @@
 		E191B9021DE5948F00CAE18E /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		E1B060E91EF8DF5D00F7646F /* ALChatManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALChatManager.swift; sourceTree = "<group>"; };
 		E1B060EB1F251E1600F7646F /* Gifs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gifs.swift; sourceTree = "<group>"; };
+		E1B060EF1F2C45B400F7646F /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		E1B060F11F2C73C800F7646F /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		E1B060F31F2D0DBF00F7646F /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		E1B060F51F2D0E1600F7646F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E1E6DC0D1D8FE66D000D1DEF /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		E1E6DC0F1D8FFC35000D1DEF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E1EE5C851DE56EFE0036AC7D /* MainTimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTimelineViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +194,10 @@
 				E16572EF1DE68A40009DCAC9 /* TutorialTableViewCell.swift */,
 				E188EB431D8733C800B72DDF /* ViewController.swift */,
 				E1B060EB1F251E1600F7646F /* Gifs.swift */,
+				E1B060EF1F2C45B400F7646F /* NotificationTableViewCell.swift */,
+				E1B060F11F2C73C800F7646F /* NotificationViewController.swift */,
+				E1B060F31F2D0DBF00F7646F /* SearchViewController.swift */,
+				E1B060F51F2D0E1600F7646F /* SettingsViewController.swift */,
 				E16572F51DE71628009DCAC9 /* Assets.xcassets */,
 				E16572F71DE719F7009DCAC9 /* gifs */,
 				E188EB4A1D8733C800B72DDF /* LaunchScreen.storyboard */,
@@ -281,6 +293,7 @@
 				TargetAttributes = {
 					E188EB3D1D8733C800B72DDF = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = DTCBVBR457;
 						LastSwiftMigration = 0830;
 					};
 					E188EB511D8733C800B72DDF = {
@@ -358,15 +371,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1B060F41F2D0DBF00F7646F /* SearchViewController.swift in Sources */,
 				E1EE5C881DE56F160036AC7D /* ProfileViewController.swift in Sources */,
 				E16573111DE7487D009DCAC9 /* Tutorial.swift in Sources */,
+				E1B060F01F2C45B400F7646F /* NotificationTableViewCell.swift in Sources */,
 				E1EE5C861DE56EFE0036AC7D /* MainTimelineViewController.swift in Sources */,
 				E1E6DC101D8FFC35000D1DEF /* LoginViewController.swift in Sources */,
 				E188EB441D8733C800B72DDF /* ViewController.swift in Sources */,
+				E1B060F61F2D0E1600F7646F /* SettingsViewController.swift in Sources */,
 				E1E6DC0E1D8FE66D000D1DEF /* SignupViewController.swift in Sources */,
 				E1B060EC1F251E1600F7646F /* Gifs.swift in Sources */,
 				E16572F01DE68A40009DCAC9 /* TutorialTableViewCell.swift in Sources */,
 				E16572EE1DE61674009DCAC9 /* TutorialsTableViewController.swift in Sources */,
+				E1B060F21F2C73C800F7646F /* NotificationViewController.swift in Sources */,
 				E1B060EA1EF8DF5D00F7646F /* ALChatManager.swift in Sources */,
 				E191B9031DE5948F00CAE18E /* MessagesViewController.swift in Sources */,
 				E188EB421D8733C800B72DDF /* AppDelegate.swift in Sources */,
@@ -515,6 +532,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = DTCBVBR457;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -535,6 +553,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = DTCBVBR457;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
