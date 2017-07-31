@@ -11,9 +11,16 @@ import UIKit
 class ProfileViewController: UIViewController {
     
     //MARK: Properties
-    
+    //Profile
     @IBOutlet weak var profilePic: UIImageView!
-    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var ageLabel: UILabel!
+    @IBOutlet weak var genderLabel: UILabel!
+    @IBOutlet weak var hometownLabel: UILabel!
+    @IBOutlet weak var currentLocationLabel: UILabel!
+    @IBOutlet weak var aboutLabel: UILabel!
+    //User's Posts
 
     override func viewDidLoad() {
         super.viewDidLoad()
