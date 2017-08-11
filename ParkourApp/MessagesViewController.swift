@@ -10,29 +10,32 @@ import UIKit
 import Applozic
 
 class MessagesViewController: UIViewController {
+    
+    // retrieve data
+    var username = String()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        let alUser : ALUser =  ALUser();
-//        alUser.applicationId = ALChatLauncher.applicationId
-        alUser.userId = "David"       // NOTE : +,*,? are not allowed chars in userId.
+        /*let alUser : ALUser =  ALUser();
+        alUser.applicationId = ALChatManager.applicationId
+        alUser.userId = "demoUserId"       // NOTE : +,*,? are not allowed chars in userId.
         alUser.email = "github@applozic.om"
         alUser.imageLink = ""    // User's profile image link.
-        alUser.displayName = "David B."  // User's Display Name
+        alUser.displayName = "DemoUserName"  // User's Display Name
         
         ALUserDefaultsHandler.setUserId(alUser.userId)
         ALUserDefaultsHandler.setEmailId(alUser.email)
-        ALUserDefaultsHandler.setDisplayName(alUser.displayName)
+        ALUserDefaultsHandler.setDisplayName(alUser.displayName)*/
 
     }
     
     override func viewDidAppear(_ animated: Bool) {
-//        let chatManager: ALChatManager = ALChatManager(applicationKey: ALChatManager.applicationId as NSString)
+        let chatManager: ALChatManager = ALChatManager(applicationKey: ALChatManager.applicationId as NSString)
         
-//        chatManager.launchChat(self)
+        chatManager.launchChat(self)
     }
 
     override func didReceiveMemoryWarning() {

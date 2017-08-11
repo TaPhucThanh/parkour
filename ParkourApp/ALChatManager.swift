@@ -18,7 +18,7 @@ var APNS_TYPE_DISTRIBUTION : Int16 = 1
 
 class ALChatManager: NSObject {
     
-    static let applicationId = "aol190c45989a866b99be591f3cf3953a8e"
+    static let applicationId = "student34a29ceab53a014235cbecdaf97c1eb44"
     
     init(applicationKey: NSString) {
         
@@ -171,14 +171,21 @@ class ALChatManager: NSObject {
     
     class func getUserDetail() -> ALUser {
         
-        // TODO:Write your won code to get userId in case of update or in case of user is not registered....
+        // TODO:Write your own code to get userId in case of update or in case of user is not registered....
+        
+        /*let user: ALUser = ALUser()
+        user.userId = ALUserDefaultsHandler.getUserId()
+        user.applicationId = ALChatManager.applicationId
+        user.email = ALUserDefaultsHandler.getEmailId()
+        user.password = ALUserDefaultsHandler.getPassword()
+        user.displayName = ALUserDefaultsHandler.getDisplayName()*/
         
         let user: ALUser = ALUser()
         user.userId = ALUserDefaultsHandler.getUserId()
         user.applicationId = ALChatManager.applicationId
         user.email = ALUserDefaultsHandler.getEmailId()
         user.password = ALUserDefaultsHandler.getPassword()
-//        user.displayName = ALUserDefaultsHandler.getDisplayName()
+        user.displayName = ALUserDefaultsHandler.getDisplayName()
 
         return user;
         

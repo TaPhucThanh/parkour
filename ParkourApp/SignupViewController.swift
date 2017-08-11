@@ -40,16 +40,16 @@ class SignupViewController: UIViewController {
         // Validation
         // Check for empty fields
         if (username.isEmpty || email.isEmpty || password.isEmpty || confirmpassword.isEmpty) {
-            displayAlertMessage("Error", alertMessage: "Missing required field(s)")
+            displayAlertMessage("Error", alertMessage: "Missing required field(s)\nAll fields are required")
         }
             
-            // Check if passwords match
+        // Check if passwords match
         else if (password != confirmpassword) {
             displayAlertMessage("Passwords do not match", alertMessage: "Please enter the correct password")
         }
             
+        // Send user data to server side
         else {
-            // Send user data to server side
             let url = URL(string: "http://pkunite.000webhostapp.com/signup.php")
             var request = URLRequest(url: url!)
             request.httpMethod = "POST"
@@ -91,6 +91,7 @@ class SignupViewController: UIViewController {
         }
     }
     
+    // Show Alert Message
     func displayAlertMessage(_ title:String, alertMessage:String) {
         
         let alert = UIAlertController(title: title, message: alertMessage, preferredStyle: UIAlertControllerStyle.alert)

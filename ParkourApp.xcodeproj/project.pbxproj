@@ -36,6 +36,7 @@
 		E1B060F21F2C73C800F7646F /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B060F11F2C73C800F7646F /* NotificationViewController.swift */; };
 		E1B060F41F2D0DBF00F7646F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B060F31F2D0DBF00F7646F /* SearchViewController.swift */; };
 		E1B060F61F2D0E1600F7646F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B060F51F2D0E1600F7646F /* SettingsViewController.swift */; };
+		E1B060F91F3E4EEA00F7646F /* NSObject+ApplozicBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B060F81F3E4EEA00F7646F /* NSObject+ApplozicBridge.m */; };
 		E1E6DC0E1D8FE66D000D1DEF /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E6DC0D1D8FE66D000D1DEF /* SignupViewController.swift */; };
 		E1E6DC101D8FFC35000D1DEF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E6DC0F1D8FFC35000D1DEF /* LoginViewController.swift */; };
 		E1EE5C861DE56EFE0036AC7D /* MainTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE5C851DE56EFE0036AC7D /* MainTimelineViewController.swift */; };
@@ -108,6 +109,8 @@
 		E1B060F11F2C73C800F7646F /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		E1B060F31F2D0DBF00F7646F /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		E1B060F51F2D0E1600F7646F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		E1B060F71F3E4EE900F7646F /* NSObject+ApplozicBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ApplozicBridge.h"; sourceTree = "<group>"; };
+		E1B060F81F3E4EEA00F7646F /* NSObject+ApplozicBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ApplozicBridge.m"; sourceTree = "<group>"; };
 		E1E6DC0D1D8FE66D000D1DEF /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		E1E6DC0F1D8FFC35000D1DEF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E1EE5C851DE56EFE0036AC7D /* MainTimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTimelineViewController.swift; sourceTree = "<group>"; };
@@ -183,6 +186,8 @@
 			children = (
 				E188EB4D1D8733C800B72DDF /* Info.plist */,
 				E1B060E91EF8DF5D00F7646F /* ALChatManager.swift */,
+				E1B060F71F3E4EE900F7646F /* NSObject+ApplozicBridge.h */,
+				E1B060F81F3E4EEA00F7646F /* NSObject+ApplozicBridge.m */,
 				E188EB411D8733C800B72DDF /* AppDelegate.swift */,
 				E1E6DC0F1D8FFC35000D1DEF /* LoginViewController.swift */,
 				E1EE5C851DE56EFE0036AC7D /* MainTimelineViewController.swift */,
@@ -379,6 +384,7 @@
 				E1E6DC101D8FFC35000D1DEF /* LoginViewController.swift in Sources */,
 				E188EB441D8733C800B72DDF /* ViewController.swift in Sources */,
 				E1B060F61F2D0E1600F7646F /* SettingsViewController.swift in Sources */,
+				E1B060F91F3E4EEA00F7646F /* NSObject+ApplozicBridge.m in Sources */,
 				E1E6DC0E1D8FE66D000D1DEF /* SignupViewController.swift in Sources */,
 				E1B060EC1F251E1600F7646F /* Gifs.swift in Sources */,
 				E16572F01DE68A40009DCAC9 /* TutorialTableViewCell.swift in Sources */,

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Applozic
 
 class ProfileViewController: UIViewController {
     
@@ -21,11 +22,18 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var currentLocationLabel: UILabel!
     @IBOutlet weak var aboutLabel: UILabel!
     //User's Posts
-
+    
+    // retrieve data
+    var username = String()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        usernameLabel.text = "(\(username))"
+        loadUserProfile()
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,6 +64,78 @@ class ProfileViewController: UIViewController {
         
         self.present(alert, animated: true, completion: nil)
         
+        let registerUserClientService: ALRegisterUserClientService = ALRegisterUserClientService()
+        registerUserClientService.logout {
+            
+        }
+        
+    }
+    
+    // Show Alert Message
+    func displayAlertMessage (_ title:String, alertMessage:String) {
+        
+        let alert = UIAlertController(title: title, message: alertMessage, preferredStyle: UIAlertControllerStyle.alert)
+        
+        let gotitAction = UIAlertAction(title: "Got it", style: UIAlertActionStyle.default, handler: nil)
+        
+        alert.addAction(gotitAction)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func loadUserProfile() {
+        
+        let url = URL(string: "http://pkunite.000webhostapp.com/getprofile.php")
+        var request = URLRequest(url: url!)
+        request.httpMethod = "POST"
+        
+        let postString = "username=\(username)"
+        
+        request.httpBody = postString.data(using: String.Encoding.utf8)
+        
+        let loadDataTask = URLSession.shared.dataTask(with: request) {
+            (data, response, error) in
+            
+            DispatchQueue.main.async {
+                
+                if let error = error {
+                    print("Error> \(error)")
+                }
+                else {
+                    guard let responseData = data
+                        else {
+                            print("Error: did not receive data")
+                            return
+                    }
+                    
+                    guard let json = try? JSONSerialization.jsonObject(with: responseData, options: []) else {
+                        print("Error trying to convert data to JSON")
+                        print("Parse error: \(String(describing: data))")
+                        return
+                    }
+                    
+                    if let parseJSON = json as? [String: AnyObject] {
+                        let name:String = parseJSON["name"] as! String
+                        let age:String = parseJSON["age"] as! String
+                        let gender:String = parseJSON["gender"] as! String
+                        let hometown:String = parseJSON["hometown"] as! String
+                        let currentLocation:String = parseJSON["currentLocation"] as! String
+                        let about:String = parseJSON["about"] as! String
+                        
+                        self.profilePic.image = UIImage(named: self.username)
+                        self.nameLabel.text = "🙂  \(name)"
+                        self.ageLabel.text = "👶🏼  \(age)"
+                        self.genderLabel.text = " ⚤  \(gender)"
+                        self.hometownLabel.text = "🏘 \(hometown)"
+                        self.currentLocationLabel.text = "📍 \(currentLocation)"
+                        self.aboutLabel.text = "  ℹ︎   \(about)"
+                    }
+                }
+            }
+        }
+        loadDataTask.resume()
     }
 
 }
+
+

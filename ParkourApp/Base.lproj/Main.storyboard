@@ -422,7 +422,7 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPu-A0-ncg">
-                                <rect key="frame" x="635" y="79" width="113" height="32"/>
+                                <rect key="frame" x="660" y="79" width="88" height="32"/>
                                 <color key="backgroundColor" red="0.045494221150875092" green="0.031977269798517227" blue="0.226157546043396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <state key="normal" title="Log Out 👋🏼">
@@ -433,9 +433,15 @@
                                     <segue destination="GmX-tp-VdB" kind="presentation" identifier="userLoggedOut" id="X0x-ns-qfG"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilepic" translatesAutoresizingMaskIntoConstraints="NO" id="IJF-hb-4fN">
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4cN-a7-wJg">
                                 <rect key="frame" x="20" y="79" width="225" height="225"/>
-                            </imageView>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="profilepic" translatesAutoresizingMaskIntoConstraints="NO" id="IJF-hb-4fN">
+                                        <rect key="frame" x="0.0" y="0.0" width="225" height="225"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qht-q4-kOl">
                                 <rect key="frame" x="286" y="140" width="200" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -514,10 +520,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="8yf-BG-GHV" secondAttribute="trailing" constant="-20" id="69c-VT-1aQ"/>
-                            <constraint firstItem="IJF-hb-4fN" firstAttribute="leading" secondItem="76g-Gf-dHS" secondAttribute="leadingMargin" id="AMx-nP-QDO"/>
-                            <constraint firstItem="qPu-A0-ncg" firstAttribute="leading" secondItem="IJF-hb-4fN" secondAttribute="trailing" constant="390" id="N5G-KM-CQR"/>
                             <constraint firstItem="qPu-A0-ncg" firstAttribute="trailing" secondItem="76g-Gf-dHS" secondAttribute="trailingMargin" id="d1c-rF-NPM"/>
-                            <constraint firstItem="IJF-hb-4fN" firstAttribute="top" secondItem="8yf-BG-GHV" secondAttribute="bottom" constant="15" id="gla-xb-4t7"/>
                             <constraint firstItem="8yf-BG-GHV" firstAttribute="leading" secondItem="76g-Gf-dHS" secondAttribute="leadingMargin" constant="-20" id="ob9-ss-iaL"/>
                             <constraint firstItem="qPu-A0-ncg" firstAttribute="top" secondItem="8yf-BG-GHV" secondAttribute="bottom" constant="15" id="qca-8d-4xj"/>
                             <constraint firstItem="8yf-BG-GHV" firstAttribute="top" secondItem="2jS-Gb-Sqi" secondAttribute="bottom" id="rld-4c-ACz"/>
@@ -829,10 +832,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profilepic" translatesAutoresizingMaskIntoConstraints="NO" id="WbH-ds-s0f">
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kDZ-6b-lv6">
                                 <rect key="frame" x="305" y="122" width="225" height="225"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <subviews>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="profilepic" translatesAutoresizingMaskIntoConstraints="NO" id="WbH-ds-s0f">
+                                        <rect key="frame" x="0.0" y="0.0" width="225" height="225"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="gqo-bs-IDS" appends="YES" id="hb1-Fz-6xc"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Change/Update Your Profile Picture" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAD-eB-Ncd">
                                 <rect key="frame" x="20" y="194" width="200" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -942,6 +954,9 @@
                                 <state key="normal" title="Username">
                                     <color key="titleColor" red="0.18823529410000001" green="0.81568627449999997" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="usernameButtonTapped:" destination="aAe-62-FR5" eventType="touchUpInside" id="UXl-S4-faQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8V-VM-Fgz">
                                 <rect key="frame" x="611" y="757" width="150" height="40"/>
@@ -975,6 +990,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a3j-gk-jye" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="gqo-bs-IDS">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="aAe-62-FR5" id="Hz4-bx-Me1"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2808.6330935251799" y="646.94244604316543"/>
         </scene>

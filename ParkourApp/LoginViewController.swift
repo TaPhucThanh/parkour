@@ -36,7 +36,7 @@ class LoginViewController: UIViewController {
         // Validation
         // Check for empty fields
         if (username.isEmpty || password.isEmpty) {
-            displayAlertMessage("Error", alertMessage: "Missing required field(s)")
+            displayAlertMessage("Error", alertMessage: "Missing required field(s)\nEnter both Username and Password to login")
         }
             
         else {
@@ -94,6 +94,7 @@ class LoginViewController: UIViewController {
         }
     }
     
+    // Show Alert Message
     func displayAlertMessage(_ title:String, alertMessage:String) {
         
         let alert = UIAlertController(title: title, message: alertMessage, preferredStyle: UIAlertControllerStyle.alert)
@@ -113,6 +114,20 @@ class LoginViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
         
     }
+    
+    // pass data
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let tabBar = segue.destination as! UITabBarController
+        let destinationViewController = tabBar.viewControllers?[1] as! ProfileViewController
+        let destinationViewController2 = tabBar.viewControllers?[6] as! SettingsViewController
+        let destinationViewController3 = tabBar.viewControllers?[3] as! MessagesViewController
+        
+        destinationViewController.username = usernameTextField.text!
+        destinationViewController2.username = usernameTextField.text!
+        destinationViewController2.password = passwordTextField.text!
+        destinationViewController3.username = usernameTextField.text!
+    }
+    
     
     /*
      // MARK: - Navigation
