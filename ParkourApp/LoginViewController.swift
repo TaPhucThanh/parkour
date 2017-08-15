@@ -41,7 +41,7 @@ class LoginViewController: UIViewController {
             
         else {
             // Send user data to server side
-            let url = URL(string: "http://pkunite.000webhostapp.com/login.php")
+            let url = URL(string: "http://pkunite2.000webhostapp.com/login.php")
             var request = URLRequest(url: url!)
             request.httpMethod = "POST"
             

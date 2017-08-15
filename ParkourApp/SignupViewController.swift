@@ -50,7 +50,7 @@ class SignupViewController: UIViewController {
             
         // Send user data to server side
         else {
-            let url = URL(string: "http://pkunite.000webhostapp.com/signup.php")
+            let url = URL(string: "http://pkunite2.000webhostapp.com/signup.php")
             var request = URLRequest(url: url!)
             request.httpMethod = "POST"
             

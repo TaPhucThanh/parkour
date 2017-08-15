@@ -87,7 +87,7 @@ class ProfileViewController: UIViewController {
     
     func loadUserProfile() {
         
-        let url = URL(string: "http://pkunite.000webhostapp.com/getprofile.php")
+        let url = URL(string: "http://pkunite2.000webhostapp.com/getprofile.php")
         var request = URLRequest(url: url!)
         request.httpMethod = "POST"
         

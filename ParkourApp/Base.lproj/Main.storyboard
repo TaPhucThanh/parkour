@@ -346,15 +346,31 @@
                                     <navigationItem title="Messages" id="9aT-XN-BYa"/>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofX-PM-K01">
+                                <rect key="frame" x="309" y="134" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0Sh-by-3Qk"/>
+                                    <constraint firstAttribute="width" constant="150" id="y22-ZF-CKH"/>
+                                </constraints>
+                                <state key="normal" title="Launch chat"/>
+                                <connections>
+                                    <action selector="didTapLaunchChatButton:" destination="xQV-O5-MP0" eventType="touchUpInside" id="1tW-d4-b4x"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="mcv-mT-UFc" secondAttribute="trailing" constant="-20" id="IA2-1C-fX6"/>
+                            <constraint firstItem="ofX-PM-K01" firstAttribute="top" secondItem="mcv-mT-UFc" secondAttribute="bottom" constant="70" id="JMT-zf-Pfv"/>
                             <constraint firstItem="mcv-mT-UFc" firstAttribute="leading" secondItem="hjM-x7-clm" secondAttribute="leadingMargin" constant="-20" id="Qw7-5N-A2L"/>
                             <constraint firstItem="mcv-mT-UFc" firstAttribute="top" secondItem="BK0-bE-DZf" secondAttribute="bottom" id="dC4-6g-m0q"/>
+                            <constraint firstItem="ofX-PM-K01" firstAttribute="centerX" secondItem="hjM-x7-clm" secondAttribute="centerX" id="xjL-Lm-foS"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Messages" image="messages" selectedImage="messagesselected" id="SLr-ug-io1"/>
+                    <connections>
+                        <outlet property="launchChatButton" destination="ofX-PM-K01" id="2nr-sG-RLA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c4B-pw-p9Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
