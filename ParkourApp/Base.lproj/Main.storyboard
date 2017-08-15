@@ -155,46 +155,63 @@
                                     <navigationItem title="Home" id="65Y-pK-mz4"/>
                                 </items>
                             </navigationBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NYF-F4-9W4">
-                                <rect key="frame" x="0.0" y="64" width="768" height="911"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qI8-h4-h4z">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="viB-8W-VMn">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iid-fZ-JIw">
+                                <rect key="frame" x="618" y="82" width="130" height="35"/>
+                                <color key="backgroundColor" red="0.18479999999999996" green="0.81816" blue="0.83999999999999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="7RB-Bf-i1v"/>
+                                    <constraint firstAttribute="width" constant="130" id="lhs-1S-uU3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="Events">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ORl-Be-pOa" kind="popoverPresentation" popoverAnchorView="iid-fZ-JIw" id="c2I-z2-hpk">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Post an update" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RH8-nZ-7bm">
+                                <rect key="frame" x="20" y="139" width="500" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="uploadimage" translatesAutoresizingMaskIntoConstraints="NO" id="Cm4-KC-alT">
+                                <rect key="frame" x="547" y="135" width="200" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="CM9-Oa-MJC" appends="YES" id="ZiW-TK-Y1W"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJq-CL-Qnv">
+                                <rect key="frame" x="184" y="271" width="400" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.045386666666666624" green="0.032200000000000006" blue="0.23000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="Post">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="GhV-mn-o5Y" firstAttribute="top" secondItem="eAj-Wf-KG7" secondAttribute="bottom" id="1Z0-qr-Xv0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iid-fZ-JIw" secondAttribute="trailing" id="4qz-BM-cmL"/>
                             <constraint firstItem="GhV-mn-o5Y" firstAttribute="leading" secondItem="E2P-sc-vek" secondAttribute="leadingMargin" constant="-20" id="Msa-f4-4PA"/>
-                            <constraint firstItem="NYF-F4-9W4" firstAttribute="top" secondItem="GhV-mn-o5Y" secondAttribute="bottom" id="VpN-Ez-Axe"/>
-                            <constraint firstItem="J8v-v0-gLI" firstAttribute="top" secondItem="NYF-F4-9W4" secondAttribute="bottom" id="awY-Be-c5A"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GhV-mn-o5Y" secondAttribute="trailing" constant="-20" id="dJm-vL-cCi"/>
-                            <constraint firstAttribute="trailing" secondItem="NYF-F4-9W4" secondAttribute="trailing" id="gep-ps-Vb3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GhV-mn-o5Y" secondAttribute="trailing" constant="-20" id="jjw-xh-L6i"/>
-                            <constraint firstItem="NYF-F4-9W4" firstAttribute="leading" secondItem="E2P-sc-vek" secondAttribute="leading" id="rLq-LN-KJ4"/>
+                            <constraint firstItem="iid-fZ-JIw" firstAttribute="top" secondItem="GhV-mn-o5Y" secondAttribute="bottom" constant="18" id="nIz-9P-KaP"/>
                             <constraint firstItem="GhV-mn-o5Y" firstAttribute="leading" secondItem="E2P-sc-vek" secondAttribute="leadingMargin" constant="-20" id="vR0-xP-GvG"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Timeline" image="timeline" selectedImage="timelineselected" id="Um9-uG-k28"/>
-                    <connections>
-                        <outlet property="collectionView" destination="NYF-F4-9W4" id="smh-bA-YG2"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ngo-7b-XRl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="CM9-Oa-MJC"/>
             </objects>
             <point key="canvasLocation" x="677.69784172661878" y="646.94244604316543"/>
         </scene>
@@ -555,13 +572,64 @@
                     <view key="view" contentMode="scaleToFill" id="G2J-3N-Q1d">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="OIc-uS-dAJ">
+                                <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.18823529410000001" green="0.81568627449999997" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Events" id="xnE-X2-vGD"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cu3-aL-teQ">
+                                <rect key="frame" x="618" y="99" width="130" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.045386666666666624" green="0.032200000000000006" blue="0.23000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="equalSpacing" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bgi-jg-n6y">
+                                <rect key="frame" x="20" y="64" width="233.5" height="141.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="New Event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1t-dr-mvc">
+                                        <rect key="frame" x="0.0" y="0.0" width="91.5" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What event/activity/training/jam?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IU8-Vz-j9D">
+                                        <rect key="frame" x="0.0" y="31.5" width="233.5" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="When is it?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZH6-Wb-cda">
+                                        <rect key="frame" x="0.0" y="71.5" width="92" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Where is it?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qi9-zc-wTy">
+                                        <rect key="frame" x="0.0" y="111.5" width="97" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Events" id="SCQ-zM-RiS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nav-Wz-vAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1441.40625" y="1993.9453124999998"/>
+            <point key="canvasLocation" x="-23" y="1351"/>
         </scene>
         <!--Sign Up View-->
         <scene sceneID="qqO-nj-xHf">
@@ -1019,24 +1087,6 @@
             </objects>
             <point key="canvasLocation" x="2808.6330935251799" y="646.94244604316543"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="O8H-Dg-paL">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1et-sO-wXb" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9W8-Gn-Pem">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="ORl-Be-pOa" kind="relationship" relationship="rootViewController" id="7H6-6Q-7uM"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KEy-8M-1Nm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="675.78125" y="1993.9453124999998"/>
-        </scene>
     </scenes>
     <resources>
         <image name="line" width="180" height="69"/>
@@ -1055,8 +1105,9 @@
         <image name="timelineselected" width="25" height="25"/>
         <image name="tutorials" width="25" height="25"/>
         <image name="tutorialsselected" width="25" height="25"/>
+        <image name="uploadimage" width="125" height="75"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="X0x-ns-qfG"/>
+        <segue reference="tRV-ZU-udw"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -34,7 +34,7 @@ class MainTimelineViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView?.backgroundColor = UIColor(white: 0.95, alpha: 1)
+        //collectionView?.backgroundColor = UIColor(white: 0.95, alpha: 1)
         collectionView?.register(TimelineCell.self, forCellWithReuseIdentifier: cellId)
     }
     

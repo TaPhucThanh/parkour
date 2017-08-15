@@ -41,7 +41,7 @@ class LoginViewController: UIViewController {
             
         else {
             // Send user data to server side
-            let url = URL(string: "http://pkunite.000webhostapp.com/login.php")
+            let url = URL(string: "http://pkunite2.000webhostapp.com/login.php")
             var request = URLRequest(url: url!)
             request.httpMethod = "POST"
             
@@ -117,15 +117,17 @@ class LoginViewController: UIViewController {
     
     // pass data
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let tabBar = segue.destination as! UITabBarController
-        let destinationViewController = tabBar.viewControllers?[1] as! ProfileViewController
-        let destinationViewController2 = tabBar.viewControllers?[6] as! SettingsViewController
-        let destinationViewController3 = tabBar.viewControllers?[3] as! MessagesViewController
-        
-        destinationViewController.username = usernameTextField.text!
-        destinationViewController2.username = usernameTextField.text!
-        destinationViewController2.password = passwordTextField.text!
-        destinationViewController3.username = usernameTextField.text!
+        if segue.identifier == "userLoggedIn" {
+            let tabBar = segue.destination as! UITabBarController
+            let destinationViewController = tabBar.viewControllers?[1] as! ProfileViewController
+            let destinationViewController2 = tabBar.viewControllers?[6] as! SettingsViewController
+            let destinationViewController3 = tabBar.viewControllers?[3] as! MessagesViewController
+            
+            destinationViewController.username = usernameTextField.text!
+            destinationViewController2.username = usernameTextField.text!
+            destinationViewController2.password = passwordTextField.text!
+            destinationViewController3.username = usernameTextField.text!
+        }
     }
     
     

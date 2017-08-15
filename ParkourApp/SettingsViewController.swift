@@ -134,7 +134,7 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
         
         // Send user data to server side - Save Changes
         else {
-            let url = URL(string: "http://pkunite.000webhostapp.com/updateprofile.php")
+            let url = URL(string: "http://pkunite2.000webhostapp.com/updateprofile.php")
             var request = URLRequest(url: url!)
             request.httpMethod = "POST"
             
@@ -187,7 +187,7 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
         
         // Send user data to server side - Confirm to Change Username
         else {
-            let url = URL(string: "http://pkunite.000webhostapp.com/changeusername.php")
+            let url = URL(string: "http://pkunite2.000webhostapp.com/changeusername.php")
             var request = URLRequest(url: url!)
             request.httpMethod = "POST"
             
@@ -251,7 +251,7 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
         
         // Send user data to server side - Change Password
         else {
-            let url = URL(string: "http://pkunite.000webhostapp.com/changepassword.php")
+            let url = URL(string: "http://pkunite2.000webhostapp.com/changepassword.php")
             var request = URLRequest(url: url!)
             request.httpMethod = "POST"
             

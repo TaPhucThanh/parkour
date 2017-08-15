@@ -20,7 +20,7 @@ class MessagesViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    /*override func viewDidAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         
         let name = tempFuncToGetUserProfile().name
         let email = tempFuncToGetUserProfile().email
@@ -39,7 +39,7 @@ class MessagesViewController: UIViewController {
         let chatManager: ALChatManager = ALChatManager(applicationKey: ALChatManager.applicationId as NSString)
         
         chatManager.launchChat(self)
-    }*/
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -58,7 +58,7 @@ class MessagesViewController: UIViewController {
     */
     
     func tempFuncToGetUserProfile() -> (name:String, email:String) {
-        let url = URL(string: "http://pkunite.000webhostapp.com/tempgetprofile.php")
+        let url = URL(string: "http://pkunite2.000webhostapp.com/tempgetprofile.php")
         var request = URLRequest(url: url!)
         request.httpMethod = "POST"
         
