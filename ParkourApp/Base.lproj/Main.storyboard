@@ -418,7 +418,9 @@
                                     <color key="textColor" red="0.18823529410000001" green="0.81568627449999997" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Profile" id="QmY-HG-cc5"/>
+                                    <navigationItem title="Profile" id="QmY-HG-cc5">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="c5P-Di-ZSr"/>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPu-A0-ncg">
@@ -504,7 +506,7 @@
                                         <rect key="frame" x="0.0" y="28" width="728" height="220"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FWw-cV-zyW" id="ppO-Xj-i2f">
-                                            <rect key="frame" x="0.0" y="0.0" width="728" height="219"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="728" height="220"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profilepic" translatesAutoresizingMaskIntoConstraints="NO" id="vLi-Hh-IDC">
@@ -541,6 +543,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AMz-Y0-PwV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="677.34375" y="1350.5859375"/>
+        </scene>
+        <!--Events-->
+        <scene sceneID="f1T-EK-UxX">
+            <objects>
+                <viewController id="ORl-Be-pOa" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8so-Vo-Eg4"/>
+                        <viewControllerLayoutGuide type="bottom" id="cqT-yy-N5v"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="G2J-3N-Q1d">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Events" id="SCQ-zM-RiS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nav-Wz-vAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1441.40625" y="1993.9453124999998"/>
         </scene>
         <!--Sign Up View-->
         <scene sceneID="qqO-nj-xHf">
@@ -997,6 +1018,24 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2808.6330935251799" y="646.94244604316543"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="O8H-Dg-paL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1et-sO-wXb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9W8-Gn-Pem">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ORl-Be-pOa" kind="relationship" relationship="rootViewController" id="7H6-6Q-7uM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KEy-8M-1Nm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="675.78125" y="1993.9453124999998"/>
         </scene>
     </scenes>
     <resources>
