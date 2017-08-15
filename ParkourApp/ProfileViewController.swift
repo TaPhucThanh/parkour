@@ -124,7 +124,12 @@ class ProfileViewController: UIViewController {
                         let currentLocation:String = parseJSON["currentLocation"] as! String
                         let about:String = parseJSON["about"] as! String
                         
-                        self.profilePic.image = UIImage(named: self.username)
+                        if let imageData = UserDefaults.standard.object(forKey: "profilePicKey") as? Data {
+                            let retrievedImage = UIImage(data: imageData)
+                            self.profilePic.image = retrievedImage
+                        }
+                        
+                        //self.profilePic.image = UIImage(named: self.username)
                         self.nameLabel.text = "🙂  \(name)"
                         self.ageLabel.text = "👶🏼  \(age)"
                         self.genderLabel.text = " ⚤  \(gender)"

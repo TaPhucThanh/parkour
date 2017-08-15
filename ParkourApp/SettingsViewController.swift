@@ -35,8 +35,16 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         
         usernameProfile.setTitle(username, for: .normal)
+        
+        if let imageData = UserDefaults.standard.object(forKey: "profilePicKey") as? Data {
+            let retrievedImage = UIImage(data: imageData)
+            profilePic.image = retrievedImage
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -72,6 +80,10 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
         
         // Dismiss the picker
         dismiss(animated: true, completion: nil)
+        
+        let data = UIImagePNGRepresentation(selectedImage)
+        UserDefaults.standard.set(data, forKey: "profilePicKey")
+        UserDefaults.standard.synchronize()
     }
     
     //MARK: Actions
