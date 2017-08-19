@@ -73,17 +73,6 @@ class ProfileViewController: UIViewController {
         
     }
     
-    // Show Alert Message
-    func displayAlertMessage (_ title:String, alertMessage:String) {
-        
-        let alert = UIAlertController(title: title, message: alertMessage, preferredStyle: UIAlertControllerStyle.alert)
-        
-        let gotitAction = UIAlertAction(title: "Got it", style: UIAlertActionStyle.default, handler: nil)
-        
-        alert.addAction(gotitAction)
-        
-        self.present(alert, animated: true, completion: nil)
-    }
     
     func loadUserProfile() {
         
@@ -141,6 +130,18 @@ class ProfileViewController: UIViewController {
             }
         }
         loadDataTask.resume()
+    }
+    
+    // Show Alert Message
+    func displayAlertMessage (_ title:String, alertMessage:String) {
+        
+        let alert = UIAlertController(title: title, message: alertMessage, preferredStyle: UIAlertControllerStyle.alert)
+        
+        let gotitAction = UIAlertAction(title: "Got it", style: UIAlertActionStyle.default, handler: nil)
+        
+        alert.addAction(gotitAction)
+        
+        self.present(alert, animated: true, completion: nil)
     }
 
 }

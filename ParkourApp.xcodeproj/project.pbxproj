@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E13AF45F1F43B781006BC6B6 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13AF45E1F43B781006BC6B6 /* EventsViewController.swift */; };
 		E16572DF1DE5FBBF009DCAC9 /* Applozic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E16572DE1DE5FBBF009DCAC9 /* Applozic.framework */; };
 		E16572E11DE5FD66009DCAC9 /* Applozic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E16572DE1DE5FBBF009DCAC9 /* Applozic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E16572EE1DE61674009DCAC9 /* TutorialsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16572ED1DE61674009DCAC9 /* TutorialsTableViewController.swift */; };
@@ -75,6 +76,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E13AF45E1F43B781006BC6B6 /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsViewController.swift; path = ../EventsViewController.swift; sourceTree = "<group>"; };
 		E16572DE1DE5FBBF009DCAC9 /* Applozic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Applozic.framework; sourceTree = "<group>"; };
 		E16572ED1DE61674009DCAC9 /* TutorialsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TutorialsTableViewController.swift; path = ../TutorialsTableViewController.swift; sourceTree = "<group>"; };
 		E16572EF1DE68A40009DCAC9 /* TutorialTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialTableViewCell.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				E1E6DC0D1D8FE66D000D1DEF /* SignupViewController.swift */,
 				E1E6DC0F1D8FFC35000D1DEF /* LoginViewController.swift */,
 				E1EE5C851DE56EFE0036AC7D /* MainTimelineViewController.swift */,
+				E13AF45E1F43B781006BC6B6 /* EventsViewController.swift */,
 				E1EE5C871DE56F160036AC7D /* ProfileViewController.swift */,
 				E16573101DE7487D009DCAC9 /* Tutorial.swift */,
 				E16572ED1DE61674009DCAC9 /* TutorialsTableViewController.swift */,
@@ -393,6 +396,7 @@
 				E1B060EA1EF8DF5D00F7646F /* ALChatManager.swift in Sources */,
 				E191B9031DE5948F00CAE18E /* MessagesViewController.swift in Sources */,
 				E188EB421D8733C800B72DDF /* AppDelegate.swift in Sources */,
+				E13AF45F1F43B781006BC6B6 /* EventsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

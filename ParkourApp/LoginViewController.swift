@@ -122,11 +122,13 @@ class LoginViewController: UIViewController {
             let destinationViewController = tabBar.viewControllers?[1] as! ProfileViewController
             let destinationViewController2 = tabBar.viewControllers?[6] as! SettingsViewController
             let destinationViewController3 = tabBar.viewControllers?[3] as! MessagesViewController
+            let destinationViewController4 = tabBar.viewControllers?[0] as! MainTimelineViewController
             
             destinationViewController.username = usernameTextField.text!
             destinationViewController2.username = usernameTextField.text!
             destinationViewController2.password = passwordTextField.text!
             destinationViewController3.username = usernameTextField.text!
+            destinationViewController4.username = usernameTextField.text!
         }
     }
     

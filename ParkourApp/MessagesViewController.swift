@@ -21,11 +21,6 @@ class MessagesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        
         launchChatButton.layer.borderColor = UIColor(50, green: 50, blue: 200).cgColor
         launchChatButton.layer.borderWidth = 1.0
         launchChatButton.layer.cornerRadius = 3.0
@@ -44,7 +39,13 @@ class MessagesViewController: UIViewController {
         ALUserDefaultsHandler.setEmailId(alUser.email)
         ALUserDefaultsHandler.setDisplayName(alUser.displayName)
         
-//        chatManager.launchChat(self)
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        // chatManager.launchChat(self)
+        
         // Do any additional setup after loading the view.
     }
     
